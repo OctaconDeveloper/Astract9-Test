@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Support\Facades\View;
 use App\Category;
 use App\Vendor;
@@ -18,7 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if(env('REDIRECT_HTTPS')){
+            $this->app['request']->server->set('HTTPS',true);
+        }
     }
 
     /** 
@@ -26,8 +29,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
+        if(env('REDIRECT_HTTPS')){
+            $url->forceSchema('https');
+        }
         // $category = Category::with('brand')->get();
         // $vendors = Vendor::withCount('product')->get();
         // $featured = Product::with('image')->where([['type','featured'],['status','1']])->get();
