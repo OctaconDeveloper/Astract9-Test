@@ -53,5 +53,16 @@ Route::middleware(['auth','admin'])->group( function(){
 	Route::get('/delete_product/{product}','ProductController@admin_product_delete');
 });
 
-
+ 
+/*
+* Vendor Routes
+*/
+Route::middleware(['auth','vendor'])->group( function(){
+	Route::get('/user/dashboard','PageController@user_dashboard')->name('vendor_dashboard');
+	Route::get('/user/add_product','PageController@user_add_product')->name('vendor_add_product');
+	Route::post('/user/add_product','ProductController@store')->name('newproduct');
+	Route::get('/user/delete_product/{product}','ProductController@vendor_product_delete');
+	Route::get('/user/view_product/{product}','ProductController@vendor_product_view');
+	Route::get('/user/all_products','ProductController@list')->name('vendor_all_product');
+});
 

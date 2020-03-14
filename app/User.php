@@ -39,7 +39,7 @@ class User extends Authenticatable
     ];
 
     public function vendor(){
-        return $this->hasOne('App\Vendor');
+        return $this->hasOne('App\Vendor','user_id');
     }
 
 }

@@ -29,7 +29,7 @@ class VendorController extends Controller
     	$this->validatelogin();
 
     	if(Auth::attempt(request()->only('email', 'password'))){
-        return auth()->user()->getRoleNames()[0] == 'admin' ? redirect('/dashboard') : redirect('/vendor') ;
+        return auth()->user()->getRoleNames()[0] == 'admin' ? redirect('/dashboard') : redirect('/user/dashboard') ;
     	}else{
     		$errors = 'Invalid login credentials';
     		return view('/login')->with('error',$errors);

@@ -51,8 +51,20 @@ class PageController extends Controller
     	return view('unauthorized');
     }
 
+    /*
+    * Vendor Dashboard
+    */
+    public function user_dashboard(){
+        return view('vendor.dashboard');
+    }
 
-
+    /*
+    * Vendor add product
+    */
+    public function user_add_product(){
+        return view('vendor.new_product');
+    }
+    
 
    
 } 
