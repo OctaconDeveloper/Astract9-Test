@@ -6,18 +6,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>@yield('title')</title> 
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/price-range.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">     
-    <link rel="shortcut icon" href="{{ asset('images/home/logo.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('images/ico/apple-touch-icon-144-precomposed.png') }}"> 
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('images/ico/apple-touch-icon-114-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/ico/apple-touch-icon-72-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('images/ico/apple-touch-icon-57-precomposed.png') }}">
+    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/prettyPhoto.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/price-range.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/animate.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('css/main.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('css/responsive.css') }}" rel="stylesheet">     
+    <link rel="shortcut icon" href="{{ secure_asset('images/home/logo.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ secure_asset('images/ico/apple-touch-icon-144-precomposed.png') }}"> 
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ secure_asset('images/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ secure_asset('images/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ secure_asset('images/ico/apple-touch-icon-57-precomposed.png') }}">
 </head><!--/head-->
 
 <body>
@@ -280,11 +280,11 @@
 	
 
   
-    <script src="{{asset('js/jquery.js') }}"></script>
-	<script src="{{asset('js/bootstrap.min.js') }}"></script>
-	<script src="{{asset('js/jquery.scrollUp.min.js') }}"></script>
-	<script src="{{asset('js/price-range.js') }}"></script>
-    <script src="{{asset('js/jquery.prettyPhoto.js') }}"></script>
-    <script src="{{asset('js/main.js') }}"></script>
+    <script src="{{secure_asset('js/jquery.js') }}"></script>
+	<script src="{{secure_asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{secure_asset('js/jquery.scrollUp.min.js') }}"></script>
+	<script src="{{secure_asset('js/price-range.js') }}"></script>
+    <script src="{{secure_asset('js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{secure_asset('js/main.js') }}"></script>
 </body>
 </html>
