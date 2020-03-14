@@ -54,7 +54,7 @@
 					<div class="col-md-4 clearfix">
 						<div class="logo pull-left">
 							<a href="/">
-								<img src="{{url('images/home/logo.png') }}" alt="" />
+								<img src="{{secure_url('images/home/logo.png') }}" alt="" />
 							</a>
 						</div>
 						<div class="btn-group pull-right clearfix">
@@ -89,7 +89,7 @@
 								<li><a href="/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="/contact-us"><i class="fa fa-phone"></i> Contact </a></li>
-								<li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="{{route('login')}}"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>

@@ -40,7 +40,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('products') ? 'active' : '' }}" href="/products">
+            <a class="nav-link {{ request()->is('products') ? 'active' : '' }}" href="{{secure_url('/products')}}">
               <span data-feather="shopping-cart"></span>
               Products
             </a>
