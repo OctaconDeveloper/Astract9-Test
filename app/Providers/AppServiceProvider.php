@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $products = Product::with(array('brand','vendor','image'))->get();
         $category = Category::with('brand')->get();
         $vendors = Vendor::withCount('product')->get();
         $featured = Product::with('image')->where([['type','featured'],['status','1']])->get();
@@ -41,5 +42,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('randomProducts1', $randomProducts1);
         View::share('randomProducts2', $randomProducts2);
         View::share('randomBrand', $randomBrand);
+        View::share('products', $products);
     }
 }

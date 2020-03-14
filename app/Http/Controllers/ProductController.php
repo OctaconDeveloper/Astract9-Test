@@ -50,4 +50,21 @@ class ProductController extends Controller
     private function brandID(){
     	return Brand::where('slug',request()->brand_slug)->first()->id;
     }
+
+    /*
+    * Delete Product
+    */
+    public function admin_product_delete(){
+        Product::find(request()->product)->delete();
+        return redirect('/products'); 
+    }
+ 
+    /*
+    * Update Product Status
+    */
+    public function admin_product_update(){
+        Product::find(request()->product)->update(['status'=> request()->id]);
+        return redirect('/products'); 
+    }
 }
+ 

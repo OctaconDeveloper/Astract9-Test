@@ -2,8 +2,12 @@
 			
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
-							<div class="view-product">
-								<img src="{{url($product->image[0]->file)}}" alt="" />
+							<div class="view-product"> 
+								@if($product->image->isEmpty())
+									<img src="" alt="{{$product->slug}}" />
+								@else
+									<img src="{{url($product->image[0]->file)}}" alt="{{$product->slug}}" />
+								@endif
 								<h3>ZOOM</h3>
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">

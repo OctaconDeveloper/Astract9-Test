@@ -7,6 +7,7 @@ use Carbon\Carbon;
 class Product extends Model
 {
 	protected $hidden = ['created_at','updated_at'];
+    protected $fillable = ['name','slug','status'];
 
     public function brand(){
     	return $this->belongsTo('App\Brand');

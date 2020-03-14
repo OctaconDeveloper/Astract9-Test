@@ -8,10 +8,10 @@
 					<div class="product-image-wrapper">
 						<div class="single-products">
 							<div class="productinfo text-center">
-							@if($product->image[0])
-								<img src="{{url($product->image[0]->file)}}" alt="{{$product->slug}}" />
-							@else
+							@if($product->image->isEmpty())
 								<img src="" alt="{{$product->slug}}" />
+							@else
+								<img src="{{url($product->image[0]->file)}}" alt="{{$product->slug}}" />
 							@endif
 								<h2>${{$product->amount}}</h2>
 								<p>{{$product->name}}</p>
@@ -36,7 +36,11 @@
 					<div class="product-image-wrapper">
 						<div class="single-products">
 							<div class="productinfo text-center">
-								<img src="{{url($product->image[0]->file)}}" alt="{{$product->slug}}" />
+								@if($product->image->isEmpty())
+									<img src="" alt="{{$product->slug}}" />
+								@else
+									<img src="{{url($product->image[0]->file)}}" alt="{{$product->slug}}" />
+								@endif
 								<h2>${{$product->amount}}</h2>
 								<p>{{$product->name}}</p>
 								<a href="/product/{{$product->slug}}" class="btn btn-default add-to-cart">

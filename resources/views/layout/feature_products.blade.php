@@ -6,10 +6,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										@if($feature->image[0])
-											<img src="{{url($feature->image[0]->file)}}" alt="{{$feature->slug}}" />
-										@else
+										@if($feature->image->isEmpty())
 											<img src="" alt="{{$feature->slug}}" />
+										@else
+											<img src="{{url($feature->image[0]->file)}}" alt="{{$feature->slug}}" />
 										@endif
 										<h2>${{$feature->amount}}</h2>
 										<p>{{$feature->name}}</p>
